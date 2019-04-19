@@ -21,10 +21,9 @@ def send():
 def listener():
 	while True:
 		Rdata = s.recv(1024)
-		if Rdata:
-			msgs.append(Rdata.decode())
-			# to avoid ">> incoming message" since ">>" is an input marker
-			print(f"\n{Rdata.decode()}")
+		msgs.append(Rdata.decode())
+	    	# to avoid ">> incoming message" since ">>" is an input marker
+    		print(f"\n{Rdata.decode()}")
 
 
 def main():
