@@ -23,7 +23,8 @@ def listener():
 		Rdata = s.recv(1024)
 		msgs.append(Rdata.decode())
 	    	# to avoid ">> incoming message" since ">>" is an input marker
-    		print(f"\n{Rdata.decode()}")
+    		#print(f"\n{Rdata.decode()}")
+		print(Rdata.decode())
 
 
 def main():
